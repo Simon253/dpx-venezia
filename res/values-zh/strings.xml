@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">拼车吧！</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+
+    <string name="button_map">地图</string>
+    <string name="button_list">列表</string>
+    <string name="default_username">聚贤庄主</string>
+    <string name="wanna_join">我要去</string>
+</resources>
