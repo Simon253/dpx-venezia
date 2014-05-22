@@ -1,17 +1,17 @@
 package com.spottechindustrial.carpool.android.model;
 
+import android.graphics.PointF;
+
 
 public class Schedule {
     // required fields
     private String mStartName;
-    private float mStartLocationX;
-    private float mStartLocationY;
+    private PointF mStartLocation;
     private long mStartTime;
     private int mStartTimeRange; //mins
 
     private String mBackName;
-    private float mBackLocationX;
-    private float mBackLocationY;
+    private PointF mBackLocation;
     private long mBackTime;
     private int mBackTimeRange; //mins
 
@@ -27,20 +27,12 @@ public class Schedule {
         return mStartName;
     }
 
-    public void setStartLocationX(final float startLocationX) {
-        mStartLocationX = startLocationX;
+    public void setStartLocationX(final PointF startLocation) {
+        mStartLocation = startLocation;
     }
 
-    public float getStartLocationX() {
-        return mStartLocationX;
-    }
-
-    public void setStartLocationY(final float startLocationY) {
-        mStartLocationY = startLocationY;
-    }
-
-    public float getStartLocationY() {
-        return mStartLocationY;
+    public PointF getStartLocation() {
+        return mStartLocation;
     }
 
     public void setStartTime(final long startTime) {
@@ -67,20 +59,12 @@ public class Schedule {
         return mBackName;
     }
 
-    public void setBackLocationX(final float backLocationX) {
-        mBackLocationX = backLocationX;
+    public void setBackLocation(final PointF backLocation) {
+        mBackLocation = backLocation;
     }
 
-    public float getBackLocationX() {
-        return mBackLocationX;
-    }
-
-    public void setBackLocationY(final float backLocationY) {
-        mBackLocationY = backLocationY;
-    }
-
-    public float getBackLocationY() {
-        return mBackLocationY;
+    public PointF getBackLocation() {
+        return mBackLocation;
     }
 
     public void setBackTime(final long backTime) {
@@ -117,28 +101,24 @@ public class Schedule {
 
     private Schedule(final Builder builder) {
         mStartName = builder.bStartName;
-        mStartLocationX = builder.bStartLocationX;
-        mStartLocationY = builder.bStartLocationY;
+        mStartLocation = builder.bStartLocation;
         mStartTime = builder.bStartTime;
         mStartTimeRange = builder.bStartTimeRange;
 
         mBackName = builder.bBackName;
-        mBackLocationX = builder.bBackLocationX;
-        mBackLocationY = builder.bBackLocationY;
+        mBackLocation = builder.bBackLocation;
         mBackTime = builder.bBackTime;
         mBackTimeRange = builder.bBackTimeRange;
     }
 
     public static class Builder{
         private String bStartName;
-        private float bStartLocationX;
-        private float bStartLocationY;
+        private PointF bStartLocation;
         private long bStartTime;
         private int bStartTimeRange; //mins
 
         private String bBackName;
-        private float bBackLocationX;
-        private float bBackLocationY;
+        private PointF bBackLocation;
         private long bBackTime;
         private int bBackTimeRange; //mins
 
@@ -151,13 +131,8 @@ public class Schedule {
             return this;
         }
 
-        public Builder setStartLocationX(float startLocationX) {
-            bStartLocationX = startLocationX;
-            return this;
-        }
-
-        public Builder setStartLocationY(float startLocationY) {
-            bStartLocationY = startLocationY;
+        public Builder setStartLocation(PointF startLocation) {
+            bStartLocation = startLocation;
             return this;
         }
 
@@ -176,13 +151,8 @@ public class Schedule {
             return this;
         }
 
-        public Builder setBackLocationX(float backLocationX) {
-            bBackLocationX = backLocationX;
-            return this;
-        }
-
-        public Builder setBackLocationY(float backLocationY) {
-            bBackLocationY = backLocationY;
+        public Builder setBackLocation(PointF backLocation) {
+            bBackLocation = backLocation;
             return this;
         }
 
