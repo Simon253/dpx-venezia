@@ -9,4 +9,23 @@
     <string name="button_list">列表</string>
     <string name="default_username">聚贤庄主</string>
     <string name="wanna_join">我要去</string>
+
+    <string name="enterEmail">请输入您的电子邮箱</string>
+    <string name="enterPassword">请输入您的密码</string>
+    <string name="enterVIPCode">请输入您的VIP邀请码</string>
+    <string name="enterUsername">应用中的昵称</string>
+
+    <string name="goRegister">新用户注册</string>
+    <string name="goLogin">返回登录</string>
+    <string name="goStart">开始体验</string>
+
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+
+    <string name="invalidEmail">这不是一个有效的电子邮箱地址，请重新输入</string>
+    <string name="emailExists">这个电子邮箱已被注册，请尝试登录，或者重新输入新的邮箱</string>
+    <string name="registerError">注册失败，请检查您的网络并再试一次</string>
+    <string name="loginError">登录失败，请检查您的网络并再试一次</string>
+    <string name="createProfileError">上传您的相关信息失败，请检查您的网络并再试一次</string>
+    <string name="emailPasswordMismatch">电子邮箱和密码错误</string>
 </resources>
