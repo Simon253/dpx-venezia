@@ -20,6 +20,7 @@ import android.widget.ListView;
 
 import com.spottechindustrial.carpool.android.adapter.NavDrawerListAdapter;
 import com.spottechindustrial.carpool.android.model.NavDrawerItem;
+import com.spottechindustrial.carpool.android.utils.SharedPreferencesUtils;
 
 public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -35,6 +36,7 @@ public class MainActivity extends Activity {
     private CharSequence mTitle;
  
     // slide menu items
+    private Menu mMenu;
     private String[] navMenuTitles;
     private TypedArray navMenuIcons;
  
@@ -138,16 +140,20 @@ public class MainActivity extends Activity {
         Fragment fragment = null;
         switch (position) {
         case 0:
-            fragment = new HomeFragment();
+            fragment = new VeneziaFragment();
+            if (null != mMenu) {
+                mMenu.findItem(R.id.actionButtonListMapSwitch).setVisible(true);
+            }
             break;
         case 1:
             fragment = new FindPeopleFragment();
             break;
         case 2:
-            fragment = new PhotosFragment();
-            break;
+            fragment = null;
+            SharedPreferencesUtils.saveLoginStatusToPreferences(getApplicationContext(), false);
         default:
-            break;
+            setResult(RESULT_OK, getIntent());
+            finish();
         }
 
         if (fragment != null) {
@@ -159,6 +165,8 @@ public class MainActivity extends Activity {
             mDrawerList.setSelection(position);
             setTitle(navMenuTitles[position]);
             mDrawerLayout.closeDrawer(mDrawerList);
+
+            invalidateOptionsMenu();
         } else {
             // error in creating fragment
             Log.e(TAG, "Error in creating fragment");
@@ -168,6 +176,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+        mMenu = menu;
         return true;
     }
 
@@ -178,8 +187,28 @@ public class MainActivity extends Activity {
             return true;
         }
         // Handle action bar actions click
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.frame_container);
+
         switch (item.getItemId()) {
-        case R.id.action_settings:
+        case R.id.actionButtonChat:
+            Log.v(TAG, "action bar chat button pressed...");
+            return true;
+        case R.id.actionButtonProposeSchedule:
+            Log.v(TAG, "action bar propose schedule button pressed...");
+            return true;
+        case R.id.actionButtonSearchSchedule:
+            Log.v(TAG, "action bar search schedule button pressed...");
+            return true;
+        case R.id.actionButtonListMapSwitch:
+            Log.v(TAG, "action bar List/Map switch button pressed...");
+            final String currentTitle = item.getTitle().toString();
+            if (currentTitle.equals(getResources().getString(R.string.button_map))) {
+                item.setTitle(getResources().getString(R.string.button_list));
+                ((VeneziaFragment) fragment).switchToMap();
+            } else if (currentTitle.equals(getResources().getString(R.string.button_list))) {
+                item.setTitle(getResources().getString(R.string.button_map));
+                ((VeneziaFragment) fragment).switchToList();
+            }
             return true;
         default:
             return super.onOptionsItemSelected(item);
@@ -192,11 +221,16 @@ public class MainActivity extends Activity {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // if nav drawer is opened, hide the action items
-        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+        final boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+        final Fragment currentFragment = getFragmentManager().findFragmentById(R.id.frame_container);
+        if (currentFragment instanceof VeneziaFragment && !drawerOpen) {
+            menu.findItem(R.id.actionButtonListMapSwitch).setVisible(true);
+        } else {
+            menu.findItem(R.id.actionButtonListMapSwitch).setVisible(false);
+        }
         return super.onPrepareOptionsMenu(menu);
     }
- 
+
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
@@ -220,5 +254,11 @@ public class MainActivity extends Activity {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public void onBackPressed() {
+        setResult(RESULT_OK);
+        finish();
     }
 }

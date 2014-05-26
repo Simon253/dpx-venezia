@@ -1,31 +1,55 @@
 package com.spottechindustrial.carpool.android;
 
-import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
 
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 
-public class VeneziaActivity extends Activity {
-    private static final String TAG = VeneziaActivity.class.getSimpleName();
+public class VeneziaFragment extends Fragment {
+    private static final String TAG = VeneziaFragment.class.getSimpleName();
 
-    private static final int RQS_GooglePlayServices = 1;
-    private static final int LIST_FRAGMENT = 1;
-    private static final int MAP_FRAGMENT = 2;
+    // private static final int RQS_GooglePlayServices = 1;
+    // private static final int LIST_FRAGMENT = 1;
+    // private static final int MAP_FRAGMENT = 2;
 
-    private int currentFragment;
-    private GoogleMap veneziaMap;
+    // private int currentFragment;
+    // private GoogleMap veneziaMap;
 
     private VeneziaListFragment veneziaListFragment;
     private MapFragment mapFragment;
 
-    private Button buttonMapListSwitch;
+    // private Button buttonMapListSwitch;
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_venezia_container, container, false);
+
+        veneziaListFragment = new VeneziaListFragment();
+        mapFragment = new MapFragment();
+
+        return rootView;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+    	super.onActivityCreated(savedInstanceState);
+    	getFragmentManager().beginTransaction().replace(R.id.veneziaFragmentContainer, veneziaListFragment).commit();
+    }
+
+    public void switchToList() {
+        Log.d(TAG, "switching to list fragment...");
+        getFragmentManager().beginTransaction().replace(R.id.veneziaFragmentContainer, veneziaListFragment).commit();
+    }
+
+    public void switchToMap() {
+        Log.d(TAG, "switching to map fragment...");
+        getFragmentManager().beginTransaction().replace(R.id.veneziaFragmentContainer, mapFragment).commit();
+    }
+    /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,23 +85,5 @@ public class VeneziaActivity extends Activity {
                 break;
         }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    */
 }

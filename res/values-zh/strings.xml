@@ -5,8 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">设置</string>
 
-    <string name="button_map">地图</string>
-    <string name="button_list">列表</string>
+    <string name="button_map">看地图</string>
+    <string name="button_list">看列表</string>
     <string name="default_username">聚贤庄主</string>
     <string name="wanna_join">我要去</string>
 
@@ -28,4 +28,11 @@
     <string name="loginError">登录失败，请检查您的网络并再试一次</string>
     <string name="createProfileError">上传您的相关信息失败，请检查您的网络并再试一次</string>
     <string name="emailPasswordMismatch">电子邮箱和密码错误</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >主页</item>
+        <item >个人设置</item>
+        <item >退出</item>
+    </string-array>
 </resources>

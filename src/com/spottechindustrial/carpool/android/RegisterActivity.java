@@ -30,6 +30,7 @@ public class RegisterActivity extends Activity implements CarPoolCallResponseLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        getActionBar().hide();
 
         editTextRegisterEmail = (EditText) findViewById(R.id.editTextRegisterEmail);
         editTextRegisterPassword = (EditText) findViewById(R.id.editTextRegisterPassword);

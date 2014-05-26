@@ -65,8 +65,7 @@ public class Constants {
     // Intent Request Code
     public static int INTENT_CODE_REGISTER = 1;
     public static int INTENT_CODE_CREATE_PROFILE = 2;
-    public static int INTENT_CODE_VENEZIA = 3;
-    public static int INTENT_CODE_PUBLISH_NEWS = 4;
+    public static int INTENT_CODE_MAIN = 3;
 
     public static int INTENT_CODE_REQUEST_PICTURE = 5;
     public static int INTENT_CODE_CROP_PICTURE = 6;

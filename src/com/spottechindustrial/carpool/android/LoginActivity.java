@@ -44,6 +44,7 @@ public class LoginActivity extends Activity implements CarPoolCallResponseListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getActionBar().hide();
 
         editTextLoginEmail = (EditText) findViewById(R.id.editTextLoginEmail);
         editTextLoginPassword = (EditText) findViewById(R.id.editTextLoginPassword);
@@ -52,6 +53,31 @@ public class LoginActivity extends Activity implements CarPoolCallResponseListen
 
         if (SharedPreferencesUtils.getLoginStatuFromPreferences(getApplicationContext())) {
             launchVeneziaActivity();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        textViewError.setVisibility(View.INVISIBLE);
+
+        // if a user profile already exists, populate the email so save user some typing
+        final Rider user = SharedPreferencesUtils.getUserFromPreferences(getApplicationContext());
+        if (null != user && null != user.getEmail()) {
+            editTextLoginEmail.setText(user.getEmail());
+        }
+        editTextLoginPassword.setText(null);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.d(TAG, "requestCode: " + requestCode);
+        Log.d(TAG, "resultCode: " + resultCode);
+
+        final boolean isLogin = SharedPreferencesUtils.getLoginStatuFromPreferences(getApplicationContext());
+        if (resultCode == RESULT_OK && requestCode == Constants.INTENT_CODE_MAIN && isLogin) {
+            finish();
         }
     }
 
@@ -162,6 +188,6 @@ public class LoginActivity extends Activity implements CarPoolCallResponseListen
 
     private void launchVeneziaActivity() {
         final Intent veneziaIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivityForResult(veneziaIntent, Constants.INTENT_CODE_VENEZIA);
+        startActivityForResult(veneziaIntent, Constants.INTENT_CODE_MAIN);
     }
 }

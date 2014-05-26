@@ -14,6 +14,7 @@ public final class R {
          */
         public static final int nav_drawer_icons=0x7f0a0001;
         /**  Nav Drawer Menu Items 
+ Nav Drawer Menu Items 
          */
         public static final int nav_drawer_items=0x7f0a0000;
     }
@@ -446,15 +447,17 @@ containing a value of this type.
         public static final int write_icon=0x7f020032;
     }
     public static final class id {
-        public static final int action_settings=0x7f060047;
+        public static final int actionButtonChat=0x7f060043;
+        public static final int actionButtonListMapSwitch=0x7f060042;
+        public static final int actionButtonProposeSchedule=0x7f060044;
+        public static final int actionButtonSearchSchedule=0x7f060045;
         public static final int book_now=0x7f060010;
-        public static final int buttonJoinScheduleRequest=0x7f060046;
-        public static final int buttonMapListSwitch=0x7f06002a;
+        public static final int buttonJoinScheduleRequest=0x7f060041;
         public static final int buyButton=0x7f06000a;
         public static final int buy_now=0x7f06000f;
         public static final int buy_with_google=0x7f06000e;
         public static final int classic=0x7f060011;
-        public static final int counter=0x7f060031;
+        public static final int counter=0x7f06002b;
         public static final int drawer_layout=0x7f06001d;
         public static final int editTextLoginEmail=0x7f060017;
         public static final int editTextLoginPassword=0x7f060018;
@@ -465,21 +468,17 @@ containing a value of this type.
         public static final int holo_dark=0x7f060005;
         public static final int holo_light=0x7f060006;
         public static final int hybrid=0x7f060004;
-        public static final int icon=0x7f06002f;
-        public static final int icons_nav=0x7f060029;
-        public static final int imageButtonChat=0x7f06002b;
+        public static final int icon=0x7f060029;
         public static final int imageButtonGoLogin=0x7f060021;
         public static final int imageButtonGoRegister=0x7f060015;
         public static final int imageButtonLogin=0x7f060019;
-        public static final int imageButtonProposeSchedule=0x7f06002c;
         public static final int imageButtonRegister=0x7f060025;
-        public static final int imageButtonSearchSchedule=0x7f06002d;
-        public static final int imageViewFancyCar=0x7f060043;
-        public static final int imageViewPlusMinusIconBack=0x7f06003f;
-        public static final int imageViewPlusMinusIconStart=0x7f060039;
-        public static final int imageViewUserIcon=0x7f060033;
-        public static final int layoutScheduleOverviewStart=0x7f060036;
-        public static final int layoutStatusOverview=0x7f060042;
+        public static final int imageViewFancyCar=0x7f06003e;
+        public static final int imageViewPlusMinusIconBack=0x7f06003a;
+        public static final int imageViewPlusMinusIconStart=0x7f060034;
+        public static final int imageViewUserIcon=0x7f06002e;
+        public static final int layoutScheduleOverviewStart=0x7f060031;
+        public static final int layoutStatusOverview=0x7f06003d;
         public static final int list_slidermenu=0x7f06001f;
         public static final int match_parent=0x7f06000c;
         public static final int monochrome=0x7f060013;
@@ -494,7 +493,7 @@ containing a value of this type.
         public static final int scrollViewRegister=0x7f060020;
         public static final int selectionDetails=0x7f06000b;
         public static final int strict_sandbox=0x7f060009;
-        public static final int strut=0x7f060035;
+        public static final int strut=0x7f060030;
         public static final int terrain=0x7f060003;
         public static final int textViewGoLogin=0x7f060022;
         public static final int textViewGoRegister=0x7f060016;
@@ -502,21 +501,21 @@ containing a value of this type.
         public static final int textViewLoginError=0x7f06001b;
         public static final int textViewRegister=0x7f060026;
         public static final int textViewRegisterError=0x7f060027;
-        public static final int textViewScheduleOverviewBack=0x7f06003c;
-        public static final int textViewScheduleOverviewBackName=0x7f06003d;
-        public static final int textViewScheduleOverviewBackTime=0x7f06003e;
-        public static final int textViewScheduleOverviewBackTimeDate=0x7f060041;
-        public static final int textViewScheduleOverviewBackTimeRange=0x7f060040;
-        public static final int textViewScheduleOverviewStartName=0x7f060037;
-        public static final int textViewScheduleOverviewStartTime=0x7f060038;
-        public static final int textViewScheduleOverviewStartTimeDate=0x7f06003b;
-        public static final int textViewScheduleOverviewStartTimeRange=0x7f06003a;
-        public static final int textViewStatusDriver=0x7f060044;
-        public static final int textViewStatusSeats=0x7f060045;
-        public static final int textViewUserIcon=0x7f060034;
-        public static final int title=0x7f060030;
-        public static final int txtLabel=0x7f060032;
-        public static final int veneziaFragmentContainer=0x7f06002e;
+        public static final int textViewScheduleOverviewBack=0x7f060037;
+        public static final int textViewScheduleOverviewBackName=0x7f060038;
+        public static final int textViewScheduleOverviewBackTime=0x7f060039;
+        public static final int textViewScheduleOverviewBackTimeDate=0x7f06003c;
+        public static final int textViewScheduleOverviewBackTimeRange=0x7f06003b;
+        public static final int textViewScheduleOverviewStartName=0x7f060032;
+        public static final int textViewScheduleOverviewStartTime=0x7f060033;
+        public static final int textViewScheduleOverviewStartTimeDate=0x7f060036;
+        public static final int textViewScheduleOverviewStartTimeRange=0x7f060035;
+        public static final int textViewStatusDriver=0x7f06003f;
+        public static final int textViewStatusSeats=0x7f060040;
+        public static final int textViewUserIcon=0x7f06002f;
+        public static final int title=0x7f06002a;
+        public static final int txtLabel=0x7f06002c;
+        public static final int veneziaFragmentContainer=0x7f06002d;
         public static final int wrap_content=0x7f06000d;
     }
     public static final class integer {
@@ -526,13 +525,11 @@ containing a value of this type.
         public static final int activity_login=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_register=0x7f030002;
-        public static final int activity_venezia=0x7f030003;
-        public static final int drawer_list_item=0x7f030004;
-        public static final int fragment_findpeople=0x7f030005;
-        public static final int fragment_home=0x7f030006;
-        public static final int fragment_photos=0x7f030007;
-        public static final int fragment_venezia_list=0x7f030008;
-        public static final int item_listview_venezia=0x7f030009;
+        public static final int drawer_list_item=0x7f030003;
+        public static final int fragment_findpeople=0x7f030004;
+        public static final int fragment_venezia_container=0x7f030005;
+        public static final int fragment_venezia_list=0x7f030006;
+        public static final int item_listview_venezia=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
@@ -688,7 +685,7 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080007;
+        public static final int AppBaseTheme=0x7f080005;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -700,8 +697,6 @@ containing a value of this type.
         
          */
         public static final int AppTheme=0x7f080004;
-        public static final int MyActionBarStyle=0x7f080006;
-        public static final int MyTheme=0x7f080005;
         public static final int WalletFragmentDefaultButtonTextAppearance=0x7f080002;
         public static final int WalletFragmentDefaultDetailsHeaderTextAppearance=0x7f080001;
         public static final int WalletFragmentDefaultDetailsTextAppearance=0x7f080000;
