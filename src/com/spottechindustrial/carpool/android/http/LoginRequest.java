@@ -6,13 +6,13 @@ import java.util.Map;
 import com.android.volley.Response.ErrorListener;
 import com.spottechindustrial.carpool.android.utils.Constants;
 
-public class RegisterRequest extends CarPoolCarRequest {
-    private static final String URL = Constants.SERVICES_CONSOLE_URL + Constants.REGISTER_API;
+public class LoginRequest extends CarPoolCarRequest {
+    private static final String URL = Constants.SERVICES_CONSOLE_URL + Constants.LOGIN_API;
 
     private String mEmail;
     private String mPassword;
 
-    public RegisterRequest(final String email, final String password, final CarPoolCallResponseListener responseListener, final ErrorListener errorListener) {
+    public LoginRequest(final String email, final String password, final CarPoolCallResponseListener responseListener, final ErrorListener errorListener) {
         super(Method.POST, URL, responseListener, errorListener);
         mEmail = email;
         mPassword = password;

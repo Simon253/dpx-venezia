@@ -40,4 +40,22 @@
     <string name="loginError">Login has failed, please check your internet and try again.</string>
     <string name="createProfileError">Failed to create your profile, please check your internet and try again.</string>
     <string name="emailPasswordMismatch">The email and password do not match any of our records.</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Profile Setting</item>
+        <item >Signout</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/navigation_drawer_home_icon</item>
+        <item>@drawable/navigation_drawer_profile_icon</item>
+        <item>@drawable/navigation_drawer_signout_icon</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
 </resources>

@@ -96,8 +96,8 @@ public class Rider {
             return new Rider(this);
         }
 
-        public Builder setId(String id) {
-            bUid = id;
+        public Builder setUid(String uid) {
+            bUid = uid;
             return this;
         }
 
