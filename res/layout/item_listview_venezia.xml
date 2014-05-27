@@ -3,59 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:baselineAligned="false"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="90dp"
     android:layout_marginBottom="10dp"
     android:orientation="horizontal"
     android:background="#FFFFFF" >
 
     <RelativeLayout
+        android:layout_marginLeft="5dp"
         android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:background="@null">
+        android:layout_weight="4"
+        android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageViewUserIcon"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginBottom="5dp"
-            android:layout_centerInParent="true"
-            android:scaleType="centerInside"
-            android:layout_alignParentTop="true"
-            android:contentDescription="@string/desc"
-            android:src="@drawable/user_default_icon" />
-
-        <TextView
-            android:id="@+id/textViewUserIcon"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:textSize="12sp"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@id/imageViewUserIcon"
-            android:ellipsize="marquee"
-            android:lines="2"
-            android:maxLines="2"
-            android:gravity="center_horizontal"
-            android:text="@string/default_username" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="0dp"
-        android:layout_weight="3"
-        android:layout_height="match_parent"
-        android:background="@drawable/schedule_overview_background">
-
-        <View
             android:id="@+id/strut"
-            android:layout_width="0dp"
-            android:layout_height="0dp" 
-            android:layout_centerHorizontal="true" />
+            android:layout_marginTop="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/round_trip_icon"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/desc" />
 
         <LinearLayout
             android:id="@+id/layoutScheduleOverviewStart"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_alignRight="@id/strut"
+            android:layout_toLeftOf="@id/strut"
             android:layout_alignParentLeft="true"
             android:orientation="vertical" >
 
@@ -63,26 +36,29 @@
                 android:id="@+id/textViewScheduleOverviewStartName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:gravity="left"
                 android:text="@string/start_name" />
-
-            <TextView
-                    android:id="@+id/textViewScheduleOverviewStartTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:gravity="left"
-                    android:text="@string/start_time" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/textViewScheduleOverviewStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:text="@string/start_time" />
+
                 <ImageView
                     android:id="@+id/imageViewPlusMinusIconStart"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/textViewScheduleOverviewStartTime"
                     android:src="@drawable/plusminus_icon"
                     android:contentDescription="@string/desc" />
 
@@ -108,7 +84,7 @@
             android:id="@+id/textViewScheduleOverviewBack"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_alignLeft="@id/strut"
+            android:layout_toRightOf="@id/strut"
             android:layout_alignParentRight="true"
             android:orientation="vertical" >
 
@@ -116,21 +92,25 @@
                 android:id="@+id/textViewScheduleOverviewBackName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="right"
                 android:text="@string/back_name" />
-
-            <TextView
-                android:id="@+id/textViewScheduleOverviewBackTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:gravity="center_vertical"
-                android:text="@string/back_time" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textViewScheduleOverviewBackTimeRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical|right"
+                    android:gravity="right"
+                    android:text="@string/back_time_range" />
 
                 <ImageView
                     android:id="@+id/imageViewPlusMinusIconBack"
@@ -138,16 +118,18 @@
                     android:layout_height="15dp"
                     android:src="@drawable/plusminus_icon"
                     android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/textViewScheduleOverviewBackTimeRange"
                     android:contentDescription="@string/desc"/>
 
                 <TextView
-                    android:id="@+id/textViewScheduleOverviewBackTimeRange"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:layout_toRightOf="@id/imageViewPlusMinusIconBack"
-                    android:gravity="center_vertical"
-                    android:text="@string/back_time_range" />
+	                android:id="@+id/textViewScheduleOverviewBackTime"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textSize="12sp"
+	                android:layout_gravity="center_vertical|right"
+	                android:gravity="right"
+	                android:layout_toLeftOf="@id/imageViewPlusMinusIconBack"
+	                android:text="@string/back_time" />
             </RelativeLayout>
 
             <TextView
@@ -155,6 +137,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="right"
                 android:text="@string/back_time_date" />
         </LinearLayout>
     </RelativeLayout>
@@ -165,44 +149,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/layoutStatusOverview"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/status_not_ready_background">
-            <ImageView
-                android:id="@+id/imageViewFancyCar"
-                android:layout_width="match_parent"
-                android:layout_height="28dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/fancy_car_icon"
-                android:scaleType="centerInside"
-                android:contentDescription="@string/desc" />
-            <TextView
-                android:id="@+id/textViewStatusDriver"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="@string/driver_status_not_yet"/>
-            <TextView
-                android:id="@+id/textViewStatusSeats"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageViewFancyCar"
-                android:layout_centerHorizontal="true"
-                android:text="@string/seats_availability" />
-        </RelativeLayout>
-
-        <Button
-            android:id="@+id/buttonJoinScheduleRequest"
-            android:text="@string/wanna_join"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/has_driver_icon"
+            android:background="@null"
+            android:contentDescription="@string/desc"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:layout_gravity="center_horizontal" />
+            android:background="@drawable/status_okay_background"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/seats_availability"/>
     </LinearLayout>
 </LinearLayout>

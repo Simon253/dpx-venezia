@@ -8,7 +8,8 @@ public interface CarPoolCallResponseListener {
         FAILED,
         ERROR_IN_USE,
         ERROR_MISMATCH,
-        ERROR_EXPIRED
+        ERROR_EXPIRED,
+        ERROR_PARAMS
     }
 
     public void onResponse(final String response, final Map<String, String> responseHeaders);

@@ -12,12 +12,13 @@
     <string name="start_name">UCI Campus</string>
     <string name="back_name">Ranch 99</string>
     <string name="start_time">11:00 AM</string>
-    <string name="start_time_range">30 mins</string>
-    <string name="start_time_date">Thu 05/12</string>
+    <string name="start_time_range">30mins</string>
+    <string name="start_time_date">Thu 05/12/2012</string>
     <string name="back_time">16:00 PM</string>
-    <string name="back_time_range">45 mins</string>
-    <string name="back_time_date">Wed 05/13</string>
+    <string name="back_time_range">45mins</string>
+    <string name="back_time_date">Wed 05/13/2014</string>
     <string name="seats_availability">4/5</string>
+    <string name="seats_availability_question">4/？</string>
     <string name="driver_status_okay">OK!</string>
     <string name="driver_status_not_yet">\?</string>
     <string name="wanna_join">Join</string>
