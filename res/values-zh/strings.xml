@@ -35,4 +35,17 @@
         <item >个人设置</item>
         <item >退出</item>
     </string-array>
+
+    <!-- Submit Schedule -->
+    <string name="startNameTitle">出发点名称及时间</string>
+    <string name="defaultStartNameHint">e.g. UCI校内</string>
+    <string name="defaultBackNameHint">e.g. 99大华超市</string>
+    <string name="pickActualAddress">选择地址</string>
+    <string name="backNameTitle">返回点名称及时间</string>
+    <string name="timeTitle">时间</string>
+    <string name="dateTitle">日期 </string>
+    <string name="rangeTitle">左右</string>
+
+    <string name="submitterRoleDriver">我开车</string>
+    <string name="submitterRolePassenger">求搭车</string>
 </resources>

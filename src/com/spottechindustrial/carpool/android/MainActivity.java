@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import android.widget.ListView;
 
 import com.spottechindustrial.carpool.android.adapter.NavDrawerListAdapter;
 import com.spottechindustrial.carpool.android.model.NavDrawerItem;
+import com.spottechindustrial.carpool.android.utils.Constants;
 import com.spottechindustrial.carpool.android.utils.SharedPreferencesUtils;
 
 public class MainActivity extends Activity {
@@ -195,6 +197,8 @@ public class MainActivity extends Activity {
             return true;
         case R.id.actionButtonProposeSchedule:
             Log.v(TAG, "action bar propose schedule button pressed...");
+            Intent registerIntent = new Intent(getApplicationContext(), SubmitScheduleActivity.class);
+            startActivityForResult(registerIntent, Constants.INTENT_CODE_SUBMIT_SCHEDULE);
             return true;
         case R.id.actionButtonSearchSchedule:
             Log.v(TAG, "action bar search schedule button pressed...");

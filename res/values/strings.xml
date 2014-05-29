@@ -59,4 +59,22 @@
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
+
+    <!-- Submit Schedule -->
+    <string name="defaultStartNameHint">e.g. UCI Campus</string>
+    <string name="defaultBackNameHint">e.g. Ranch 99 Market</string>
+    <string name="defaultEditGoLocAddress">defaultEditGoLocAdress</string>
+    <string name="defaultEditBackLocAddress">defaultEditGoLocAdress</string>
+    <string name="startNameTitle">Start Place/Time</string>
+    <string name="pickActualAddress">actual address</string>
+    <string name="editScheduleActivity">Propose a schedule</string>
+    <string name="backNameTitle">Return Place/Time</string>
+    <string name="timeTitle">Time</string>
+    <string name="dateTitle">Date</string>
+    <string name="rangeTitle">Around</string>
+
+    <string name="submitterRoleDriver">I\'ll Drive</string>
+    <string name="submitterRolePassenger">Need Car Pool</string>
+    <color name="text_color">#31D1F1</color>
+    <color name="white">#ffffff</color>
 </resources>

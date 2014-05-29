@@ -4,6 +4,9 @@ public class Constants {
     private Constants(){}
 
     public static final String LAYOUT_ID = "layoutId";
+    public static final String TIME_PICKER_SET_HOUR = "setHour";
+    public static final String TIME_PICKER_SET_MINUTE = "setMinute";
+    public static final String TIME_PICKER_CALLER_ID = "callerId";
 
     public static char MALE = 'M';
     public static char FEMALE = 'F';
@@ -50,8 +53,6 @@ public class Constants {
     public static final int IMAGE_USAGE_FOR_TALKS = 2;
     public static final int IMAGE_USAGE_FOR_SETTINGS = 1;
 
-    public static final String VIP_CODE = "vipCode";
-
     // HTTP Response Params
     public static final String STATUS = "status";
     public static final String DATA = "data";
@@ -66,6 +67,7 @@ public class Constants {
     public static int INTENT_CODE_REGISTER = 1;
     public static int INTENT_CODE_CREATE_PROFILE = 2;
     public static int INTENT_CODE_MAIN = 3;
+    public static int INTENT_CODE_SUBMIT_SCHEDULE = 4;
 
     public static int INTENT_CODE_REQUEST_PICTURE = 5;
     public static int INTENT_CODE_CROP_PICTURE = 6;

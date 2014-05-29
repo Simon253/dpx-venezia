@@ -25,6 +25,14 @@ public class Utils {
         return m.matches();
     }
 
+    public static String padString(int c){
+        if(c >= 10) {
+            return String.valueOf(c);
+        } else {
+            return "0" + String.valueOf(c);
+        }
+    }
+
     public static void hideSoftKeyboard(final Context context, final EditText editText){
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
