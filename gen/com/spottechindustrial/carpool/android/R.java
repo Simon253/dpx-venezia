@@ -394,6 +394,8 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f090000;
         public static final int activity_vertical_margin=0x7f090001;
+        public static final int calendar_view_dialog_height=0x7f090003;
+        public static final int calendar_view_dialog_width=0x7f090002;
     }
     public static final class drawable {
         public static final int common_signin_btn_icon_dark=0x7f020000;
@@ -453,10 +455,10 @@ containing a value of this type.
         public static final int write_icon=0x7f020036;
     }
     public static final class id {
-        public static final int actionButtonChat=0x7f06004b;
-        public static final int actionButtonListMapSwitch=0x7f06004a;
-        public static final int actionButtonProposeSchedule=0x7f06004c;
-        public static final int actionButtonSearchSchedule=0x7f06004d;
+        public static final int actionButtonChat=0x7f06004d;
+        public static final int actionButtonListMapSwitch=0x7f06004c;
+        public static final int actionButtonProposeSchedule=0x7f06004e;
+        public static final int actionButtonSearchSchedule=0x7f06004f;
         public static final int backStreetAddress=0x7f060031;
         public static final int book_now=0x7f060010;
         public static final int buttonEditBackTimeDate=0x7f060032;
@@ -468,8 +470,9 @@ containing a value of this type.
         public static final int buyButton=0x7f06000a;
         public static final int buy_now=0x7f06000f;
         public static final int buy_with_google=0x7f06000e;
+        public static final int calendarView=0x7f060038;
         public static final int classic=0x7f060011;
-        public static final int counter=0x7f06003a;
+        public static final int counter=0x7f06003c;
         public static final int drawer_layout=0x7f06001d;
         public static final int editBackName=0x7f06002f;
         public static final int editStartName=0x7f060029;
@@ -482,14 +485,14 @@ containing a value of this type.
         public static final int holo_dark=0x7f060005;
         public static final int holo_light=0x7f060006;
         public static final int hybrid=0x7f060004;
-        public static final int icon=0x7f060038;
+        public static final int icon=0x7f06003a;
         public static final int imageButtonGoLogin=0x7f060021;
         public static final int imageButtonGoRegister=0x7f060015;
         public static final int imageButtonLogin=0x7f060019;
         public static final int imageButtonRegister=0x7f060025;
-        public static final int imageViewPlusMinusIconBack=0x7f060047;
-        public static final int imageViewPlusMinusIconStart=0x7f060041;
-        public static final int layoutScheduleOverviewStart=0x7f06003e;
+        public static final int imageViewPlusMinusIconBack=0x7f060049;
+        public static final int imageViewPlusMinusIconStart=0x7f060043;
+        public static final int layoutScheduleOverviewStart=0x7f060040;
         public static final int list_slidermenu=0x7f06001f;
         public static final int mapIconBack=0x7f060030;
         public static final int mapIconStart=0x7f06002a;
@@ -497,6 +500,7 @@ containing a value of this type.
         public static final int monochrome=0x7f060013;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
+        public static final int numberPicker=0x7f060039;
         public static final int production=0x7f060007;
         public static final int progressBarLogin=0x7f06001c;
         public static final int progressBarRegister=0x7f060028;
@@ -510,7 +514,7 @@ containing a value of this type.
         public static final int selectionDetails=0x7f06000b;
         public static final int startStreetAddress=0x7f06002b;
         public static final int strict_sandbox=0x7f060009;
-        public static final int strut=0x7f06003d;
+        public static final int strut=0x7f06003f;
         public static final int terrain=0x7f060003;
         public static final int textViewGoLogin=0x7f060022;
         public static final int textViewGoRegister=0x7f060016;
@@ -518,18 +522,18 @@ containing a value of this type.
         public static final int textViewLoginError=0x7f06001b;
         public static final int textViewRegister=0x7f060026;
         public static final int textViewRegisterError=0x7f060027;
-        public static final int textViewScheduleOverviewBack=0x7f060044;
-        public static final int textViewScheduleOverviewBackName=0x7f060045;
-        public static final int textViewScheduleOverviewBackTime=0x7f060048;
-        public static final int textViewScheduleOverviewBackTimeDate=0x7f060049;
-        public static final int textViewScheduleOverviewBackTimeRange=0x7f060046;
-        public static final int textViewScheduleOverviewStartName=0x7f06003f;
-        public static final int textViewScheduleOverviewStartTime=0x7f060040;
-        public static final int textViewScheduleOverviewStartTimeDate=0x7f060043;
-        public static final int textViewScheduleOverviewStartTimeRange=0x7f060042;
-        public static final int title=0x7f060039;
-        public static final int txtLabel=0x7f06003b;
-        public static final int veneziaFragmentContainer=0x7f06003c;
+        public static final int textViewScheduleOverviewBack=0x7f060046;
+        public static final int textViewScheduleOverviewBackName=0x7f060047;
+        public static final int textViewScheduleOverviewBackTime=0x7f06004a;
+        public static final int textViewScheduleOverviewBackTimeDate=0x7f06004b;
+        public static final int textViewScheduleOverviewBackTimeRange=0x7f060048;
+        public static final int textViewScheduleOverviewStartName=0x7f060041;
+        public static final int textViewScheduleOverviewStartTime=0x7f060042;
+        public static final int textViewScheduleOverviewStartTimeDate=0x7f060045;
+        public static final int textViewScheduleOverviewStartTimeRange=0x7f060044;
+        public static final int title=0x7f06003b;
+        public static final int txtLabel=0x7f06003d;
+        public static final int veneziaFragmentContainer=0x7f06003e;
         public static final int wrap_content=0x7f06000d;
     }
     public static final class integer {
@@ -540,17 +544,19 @@ containing a value of this type.
         public static final int activity_main=0x7f030001;
         public static final int activity_register=0x7f030002;
         public static final int activity_submit_schedule=0x7f030003;
-        public static final int drawer_list_item=0x7f030004;
-        public static final int fragment_findpeople=0x7f030005;
-        public static final int fragment_venezia_container=0x7f030006;
-        public static final int fragment_venezia_list=0x7f030007;
-        public static final int item_listview_venezia=0x7f030008;
+        public static final int dialog_fragment_calendar_view=0x7f030004;
+        public static final int dialog_fragment_number_picker=0x7f030005;
+        public static final int drawer_list_item=0x7f030006;
+        public static final int fragment_findpeople=0x7f030007;
+        public static final int fragment_venezia_container=0x7f030008;
+        public static final int fragment_venezia_list=0x7f030009;
+        public static final int item_listview_venezia=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
     }
     public static final class string {
-        public static final int action_settings=0x7f040022;
+        public static final int action_settings=0x7f040021;
         public static final int app_name=0x7f040020;
         public static final int auth_client_needs_enabling_title=0x7f040001;
         public static final int auth_client_needs_installation_title=0x7f040002;
@@ -558,13 +564,14 @@ containing a value of this type.
         public static final int auth_client_play_services_err_notification_msg=0x7f040004;
         public static final int auth_client_requested_by_msg=0x7f040005;
         public static final int auth_client_using_bad_version_title=0x7f040000;
-        public static final int backNameTitle=0x7f04004b;
-        public static final int back_name=0x7f040028;
-        public static final int back_time=0x7f04002c;
-        public static final int back_time_date=0x7f04002e;
-        public static final int back_time_range=0x7f04002d;
-        public static final int button_list=0x7f040024;
-        public static final int button_map=0x7f040023;
+        public static final int backNameTitle=0x7f04004f;
+        public static final int back_name=0x7f04002c;
+        public static final int back_time=0x7f040030;
+        public static final int back_time_date=0x7f040032;
+        public static final int back_time_range=0x7f040031;
+        public static final int button_list=0x7f040028;
+        public static final int button_map=0x7f040027;
+        public static final int cancel=0x7f040023;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -654,56 +661,59 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f04001e;
-        public static final int createProfileError=0x7f040041;
-        public static final int dateTitle=0x7f04004d;
-        public static final int defaultBackNameHint=0x7f040045;
-        public static final int defaultEditBackLocAddress=0x7f040047;
-        public static final int defaultEditGoLocAddress=0x7f040046;
+        public static final int confirm=0x7f040022;
+        public static final int createProfileError=0x7f040045;
+        public static final int dateTitle=0x7f040051;
+        public static final int defaultBackNameHint=0x7f040049;
+        public static final int defaultEditBackLocAddress=0x7f04004b;
+        public static final int defaultEditGoLocAddress=0x7f04004a;
         /**  Submit Schedule 
          */
-        public static final int defaultStartNameHint=0x7f040044;
-        public static final int default_username=0x7f040026;
-        public static final int desc=0x7f040025;
+        public static final int defaultStartNameHint=0x7f040048;
+        public static final int default_username=0x7f04002a;
+        public static final int desc=0x7f040029;
         /**  Content Description 
          */
-        public static final int desc_list_item_icon=0x7f040043;
-        public static final int driver_status_not_yet=0x7f040032;
-        public static final int driver_status_okay=0x7f040031;
-        public static final int editScheduleActivity=0x7f04004a;
-        public static final int emailExists=0x7f04003e;
-        public static final int emailPasswordMismatch=0x7f040042;
-        public static final int enterEmail=0x7f040034;
-        public static final int enterPassword=0x7f040035;
-        public static final int enterUsername=0x7f040037;
-        public static final int enterVIPCode=0x7f040036;
-        public static final int goLogin=0x7f040039;
-        public static final int goRegister=0x7f040038;
-        public static final int goStart=0x7f04003a;
-        public static final int hello_world=0x7f040021;
-        public static final int invalidEmail=0x7f04003d;
-        public static final int login=0x7f04003c;
-        public static final int loginError=0x7f040040;
-        public static final int pickActualAddress=0x7f040049;
-        public static final int rangeTitle=0x7f04004e;
-        public static final int register=0x7f04003b;
-        public static final int registerError=0x7f04003f;
-        public static final int seats_availability=0x7f04002f;
-        public static final int seats_availability_question=0x7f040030;
+        public static final int desc_list_item_icon=0x7f040047;
+        public static final int driver_status_not_yet=0x7f040036;
+        public static final int driver_status_okay=0x7f040035;
+        public static final int editScheduleActivity=0x7f04004e;
+        public static final int emailExists=0x7f040042;
+        public static final int emailPasswordMismatch=0x7f040046;
+        public static final int enterEmail=0x7f040038;
+        public static final int enterPassword=0x7f040039;
+        public static final int enterUsername=0x7f04003b;
+        public static final int enterVIPCode=0x7f04003a;
+        public static final int goLogin=0x7f04003d;
+        public static final int goRegister=0x7f04003c;
+        public static final int goStart=0x7f04003e;
+        public static final int invalidEmail=0x7f040041;
+        public static final int invalid_date=0x7f040024;
+        public static final int login=0x7f040040;
+        public static final int loginError=0x7f040044;
+        public static final int mins=0x7f040026;
+        public static final int pickActualAddress=0x7f04004d;
+        public static final int plus_minus=0x7f040025;
+        public static final int rangeTitle=0x7f040052;
+        public static final int register=0x7f04003f;
+        public static final int registerError=0x7f040043;
+        public static final int seats_availability=0x7f040033;
+        public static final int seats_availability_question=0x7f040034;
         /**  Submit Schedule 
          */
-        public static final int startNameTitle=0x7f040048;
-        public static final int start_name=0x7f040027;
-        public static final int start_time=0x7f040029;
-        public static final int start_time_date=0x7f04002b;
-        public static final int start_time_range=0x7f04002a;
-        public static final int submitterRoleDriver=0x7f04004f;
-        public static final int submitterRolePassenger=0x7f040050;
-        public static final int timeTitle=0x7f04004c;
+        public static final int startNameTitle=0x7f04004c;
+        public static final int start_name=0x7f04002b;
+        public static final int start_time=0x7f04002d;
+        public static final int start_time_date=0x7f04002f;
+        public static final int start_time_range=0x7f04002e;
+        public static final int submitterRoleDriver=0x7f040053;
+        public static final int submitterRolePassenger=0x7f040054;
+        public static final int timeTitle=0x7f040050;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
         public static final int wallet_buy_button_place_holder=0x7f04001f;
-        public static final int wanna_join=0x7f040033;
+        public static final int wanna_join=0x7f040037;
     }
     public static final class style {
         /** 

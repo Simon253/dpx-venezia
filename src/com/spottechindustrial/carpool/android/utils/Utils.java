@@ -1,6 +1,9 @@
 package com.spottechindustrial.carpool.android.utils;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -17,7 +20,27 @@ import com.spottechindustrial.carpool.android.model.Rider;
 import com.spottechindustrial.carpool.android.model.Token;
 
 public class Utils {
+
     private Utils() {}
+
+    public static String buildShortDateString(final int year, final int month, final int day) {
+        final String yearString = String.valueOf(year);
+        final StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(String.valueOf(month) + "/" + String.valueOf(day) + "/");
+        stringBuilder.append(yearString.charAt(2));
+        stringBuilder.append(yearString.charAt(3));
+        return stringBuilder.toString();
+    }
+
+    public static Date convertYearMonthDayToDate(final int year, final int month, final int day) {
+        final Calendar cal = Calendar.getInstance();
+        cal.set(year, month, day);
+        return cal.getTime();
+    }
+
+    public static DateFormat getDateFormat(final Context context) {
+        return android.text.format.DateFormat.getDateFormat(context);
+    }
 
     public static boolean isValidEmail(final String email) {
         final Pattern p = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
